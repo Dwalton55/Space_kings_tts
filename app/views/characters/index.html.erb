@@ -1,0 +1,59 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1>Characters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Player</th>
+      <th>Concept</th>
+      <th>Maxhealth</th>
+      <th>Currenthealth</th>
+      <th>Brawn</th>
+      <th>Agility</th>
+      <th>Wit</th>
+      <th>Intelligence</th>
+      <th>Charm</th>
+      <th>Presense</th>
+      <th>Maxdodge</th>
+      <th>Currentdrive</th>
+      <th>Initiative</th>
+      <th>Maxdrive</th>
+      <th>Currentdrive</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= character.name %></td>
+        <td><%= character.player %></td>
+        <td><%= character.concept %></td>
+        <td><%= character.maxHealth %></td>
+        <td><%= character.currentHealth %></td>
+        <td><%= character.brawn %></td>
+        <td><%= character.agility %></td>
+        <td><%= character.wit %></td>
+        <td><%= character.intelligence %></td>
+        <td><%= character.charm %></td>
+        <td><%= character.presense %></td>
+        <td><%= character.maxDodge %></td>
+        <td><%= character.currentDrive %></td>
+        <td><%= character.initiative %></td>
+        <td><%= character.maxDrive %></td>
+        <td><%= character.currentDrive %></td>
+        <td><%= link_to 'Show', character %></td>
+        <td><%= link_to 'Edit', edit_character_path(character) %></td>
+        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Character', new_character_path %>
+</div>

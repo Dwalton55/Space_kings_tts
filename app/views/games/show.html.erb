@@ -1,0 +1,33 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+<div class="table">
+<p>
+  <strong>Name:</strong>
+  <%= @game.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @game.description %>
+</p>
+</div>
+<div>
+<% @characters.each do |character| %>
+<%if character.game_id == @game.id %>
+	<div class="container">
+		<div class="row">
+			<div class='col-sm-3'>
+				<div class="well">
+	<%= character.name %><br>
+<%= link_to "Edit Character", edit_character_path(user_id: current_user.id, game_id: @game_id, id: character.id)%>
+</div>
+</div>
+<% end -%>
+<% end -%>
+</div>
+</div>
+
+</div>
+<%= link_to 'Create a Character', new_character_path(game_id: @game.id, user_id: current_user.id), class: "btn" %>
+<%= link_to 'Edit', edit_game_path(@game), class: "btn" %> 
+</div>

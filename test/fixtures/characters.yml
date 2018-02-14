@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  player: MyString
+  concept: MyText
+  maxHealth: 1
+  currentHealth: 1
+  brawn: 1
+  agility: 1
+  wit: 1
+  intelligence: 1
+  charm: 1
+  presense: 1
+  maxDodge: 1
+  currentDrive: 1
+  initiative: 1
+  maxDrive: 1
+  currentDrive: 1
+
+two:
+  name: MyString
+  player: MyString
+  concept: MyText
+  maxHealth: 1
+  currentHealth: 1
+  brawn: 1
+  agility: 1
+  wit: 1
+  intelligence: 1
+  charm: 1
+  presense: 1
+  maxDodge: 1
+  currentDrive: 1
+  initiative: 1
+  maxDrive: 1
+  currentDrive: 1
