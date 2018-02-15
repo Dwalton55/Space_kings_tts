@@ -18,6 +18,7 @@ class Character < ApplicationRecord
 
 	def set_drive
 		self.maxDrive = self.wit + self.presense
+		self.currentDrive = self.maxDrive
 	end
 
 	def set_init

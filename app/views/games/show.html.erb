@@ -9,6 +9,10 @@
 <p>
   <strong>Description:</strong>
   <%= @game.description %>
+  </div>
+<%= link_to 'Create a Character', new_character_path(game_id: @game.id, user_id: current_user.id), class: "btn" %>
+<%= link_to 'Edit', edit_game_path(@game), class: "btn" %> 
+</div>
 </p>
 </div>
 <div>
@@ -18,16 +22,17 @@
 		<div class="row">
 			<div class='col-sm-3'>
 				<div class="well">
-	<%= character.name %><br>
-<%= link_to "Edit Character", edit_character_path(user_id: current_user.id, game_id: @game_id, id: character.id)%>
+<h3>Name: </h3> <%= character.name %><br>
+<h3>Health: </h3> <%= character.currentHealth %><br>
+<h3> Drive: </h3>	<%= character.currentDrive %><br>
+<h3>Initiative: </h3>	<%= character.initiative %><br>
+<%= link_to "Edit Character", edit_character_path(user_id: current_user.id, game_id: @game_id, id: character.id), class: "btn"%>
 </div>
 </div>
 <% end -%>
 <% end -%>
+</div>
+</div>
 </div>
 </div>
 
-</div>
-<%= link_to 'Create a Character', new_character_path(game_id: @game.id, user_id: current_user.id), class: "btn" %>
-<%= link_to 'Edit', edit_game_path(@game), class: "btn" %> 
-</div>
