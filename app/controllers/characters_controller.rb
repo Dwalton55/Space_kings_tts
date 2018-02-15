@@ -18,7 +18,7 @@ class CharactersController < ApplicationController
     if @characters == nil
       redirect_to games_path
     end
-    @character = Character.find_by(params[:id])
+    @character = Character.find(params[:id])
   end
 
   # GET /characters/new
