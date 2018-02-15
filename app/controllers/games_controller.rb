@@ -11,7 +11,6 @@ class GamesController < ApplicationController
 
   # GET /games/1/edit
   def show
-     @character = Character.find(params[:id])
     @characters = Character.all
     @game_id =params[:id] 
    
