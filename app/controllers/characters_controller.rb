@@ -15,10 +15,10 @@ class CharactersController < ApplicationController
   def show
     @game_id = params[:game_id]
     @characters = Character.all
-    @character = Character.find_by(params[:id])
-    if @character == nil
+    if @characters == nil
       redirect_to games_path
     end
+    @character = Character.find_by(params[:id])
   end
 
   # GET /characters/new

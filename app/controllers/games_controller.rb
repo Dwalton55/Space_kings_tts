@@ -7,7 +7,6 @@ class GamesController < ApplicationController
   # GET /games/new
   def new
     @game = Game.new
-    redirect_to games_path
   end
 
   # GET /games/1/edit
