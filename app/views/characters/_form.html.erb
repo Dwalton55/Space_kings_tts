@@ -37,38 +37,49 @@
   <div class="form-group">
     <%= form.hidden_field :currentHealth, id: :character_currentHealth, class: "form-control"%>
   </div>
-  <div class="container-fluid">
   <div class="row">
   <div class="col-md-6">
   <div class="form-group">
-    <%= form.label :brawn %>
-    <%= form.number_field :brawn, id: :character_brawn, min: 1, max: 4, class: "form-control"%>
+    <%= form.hidden_field :brawn, id: :character_brawn, min: 1, max: 4, class: "form-control skill", value: 1  %>
+    <span>Brawn: <span id="brawn">1</span></span>
+    <button class="btn btn-success" type="button" onclick="addPoint(character_brawn, brawn)"> +</button>
+    <button class="btn btn-danger" type="button" onclick="subPoint(character_brawn, brawn)"> -</button>
   </div>
 
   <div class="form-group">
-    <%= form.label :agility %>
-    <%= form.number_field :agility, id: :character_agility, min: 1, max: 4, class: "form-control" %>
+    <%= form.hidden_field :agility, id: :character_agility, min: 1, max: 4, class: "form-control skill", value: 1 %>
+    <span>Agility: <span id="agility">1</span></span>
+    <button class="btn btn-success" type="button" onclick="addPoint(character_agility, agility)"> +</button>
+    <button class="btn btn-danger" type="button" onclick="subPoint(character_agility, agility)"> -</button>
   </div>
 
   <div class="form-group">
-    <%= form.label :wit %>
-    <%= form.number_field :wit, id: :character_wit, min: 1, max: 4, class: "form-control"%>
+    <%= form.hidden_field :wit, id: :character_wit, min: 1, max: 4, class: "form-control skill", value: 1%>
+    <span>Wit: <span id="wit">1</span></span>
+    <button class="btn btn-success"  type="button" onclick="addPoint(character_wit, wit)"> +</button>
+    <button class="btn btn-danger" type="button" onclick="subPoint(character_wit, wit)"> -</button>
   </div>
-</div>
+  </div>
 <div class="col-md-6">
   <div class="form-group">
-    <%= form.label :intelligence %>
-    <%= form.number_field :intelligence, id: :character_intelligence, min: 1, max: 4, class: "form-control"%>
+    <%= form.hidden_field :intelligence, id: :character_intelligence, min: 1, max: 4, class: "form-control skill", value: 1%>
+    <span>Intelligence: <span id="intelligence">1</span></span>
+    <button class="btn btn-success" type="button" onclick="addPoint(character_intelligence, intelligence)"> +</button>
+    <button class="btn btn-danger" type="button" onclick="subPoint(character_intelligence, intelligence)"> -</button>
   </div>
 
   <div class="form-group">
-    <%= form.label :charm %>
-    <%= form.number_field :charm, id: :character_charm, min: 1, max: 4, class: "form-control" %>
+    <%= form.hidden_field :charm, id: :character_charm, min: 1, max: 4, class: "form-control skill", value: 1 %>
+    <span>Charm: <span id="charm">1</span></span>
+    <button class="btn btn-success" type="button" onclick="addPoint(character_charm, charm)"> + </button>
+    <button  class="btn btn-danger" type="button" onclick="subPoint(character_charm, charm)"> -</button>
   </div>
 
   <div class="form-group">
-    <%= form.label :presense %>
-    <%= form.number_field :presense, id: :character_presense, min: 1, max: 4, class: "form-control" %>
+    <%= form.hidden_field :presense, id: :character_presense, min: 1, max: 4, class: "form-control skill", value: 1 %>
+    <span>Presense: <span id="presense">1</span></span>
+    <button class="btn btn-success" type="button" onclick="addPoint(character_presense, presense)"> +</button>
+    <button class="btn btn-danger" type="button" onclick="subPoint(character_presense, presense)"> -</button>
   </div>
 
   <div class="form-group">
@@ -93,6 +104,5 @@
 </div>
 </div>
   <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    <%= form.submit class: "btn btn-primary" %>
+ <% end %>

@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
  <%=favicon_link_tag("ship.png") %> 
     <%= stylesheet_link_tag    'application', media: 'all'%>
-    <%= javascript_include_tag 'application' %>
+
   </head>
 
   <body>
@@ -50,5 +50,6 @@
     </div>
   </nav>
     <%= yield %>
+        <%= javascript_include_tag 'application'%>
   </body>
 </html>

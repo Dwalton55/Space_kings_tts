@@ -29,10 +29,7 @@
 	font-weight: bold;
 }
 
-.btn{
-	background-color: black;
-	color: white;
-}
+
 .char-header{
 	background-color: black;
 	height: 40px;
@@ -65,7 +62,12 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-.btn:hover{
-	color: black;
-	background-color: grey;
+
+
+.btn.btn-danger{
+	float:right;
+}
+
+.btn.btn-success{
+	float:right;
 }
