@@ -3,7 +3,8 @@ class Character < ApplicationRecord
 	belongs_to :user
 
 	before_save :set_health, :set_dodge, :set_drive, :set_init
-
+validates :name, presence: true
+validates :player, presence: true
 
 	private
 
