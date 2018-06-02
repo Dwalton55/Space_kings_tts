@@ -10,6 +10,7 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
   <div class="field">
   <%= form.hidden_field :game_id, value: @game_id %>
 </div>
@@ -37,6 +38,7 @@
   <div class="form-group">
     <%= form.hidden_field :currentHealth, id: :character_currentHealth, class: "form-control"%>
   </div>
+</div>
   <div class="row">
   <div class="col-md-6">
   <div class="form-group">
@@ -105,4 +107,5 @@
 </div>
   <div class="actions">
     <%= form.submit id: "char_submit", class: "btn btn-warning" %>
+    <button type="button" class="btn btn-primary" onclick="hideMe()"> Click Me</button>
  <% end %>
