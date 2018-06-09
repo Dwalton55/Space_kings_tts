@@ -1,8 +1,8 @@
 <div class="container">
 <h1>Editing Character</h1>
-
+<h5> Available Skill Points <span  id="points"></span> </h5>
+<h5 id="practices"></h5>
 <%= render 'form', character: @character, game_id: @game_id, user_id: @user_id %>
 
-<%= link_to 'Show', @character %> |
-<%= link_to 'Back', characters_path %>
+ <%= javascript_include_tag 'newchar'%>
 </div>
