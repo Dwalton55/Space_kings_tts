@@ -1,4 +1,4 @@
-<<div class="row">
+<div class="row">
   <% if @characters.length == 0%>
   <h3> No Characters</h3>
   <%else%>
@@ -73,11 +73,13 @@
   <%= character.maxDrive %>
 </p>
 <p>
-  
+ <%= link_to "Play Game", game_path(id: @character.game_id)%> 
 </p>
 </div>
 </div>
+
 <% end -%>
+
 <% end -%>
 <% end -%>
 </div>

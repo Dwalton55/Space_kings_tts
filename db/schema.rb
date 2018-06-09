@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180212235009) do
+ActiveRecord::Schema.define(version: 20180609130813) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,26 @@ ActiveRecord::Schema.define(version: 20180212235009) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "game_id"
+    t.integer "athletics"
+    t.integer "biology"
+    t.integer "computers"
+    t.integer "empathy"
+    t.integer "engineering"
+    t.integer "explosives"
+    t.integer "firearms"
+    t.integer "investigation"
+    t.integer "law"
+    t.integer "lying"
+    t.integer "melee"
+    t.integer "perform"
+    t.integer "piloting"
+    t.integer "persuasion"
+    t.integer "sneaking"
+    t.integer "spacewise"
+    t.integer "survival"
+    t.integer "telekinesis"
+    t.integer "telepathy"
+    t.integer "special"
   end
 
   create_table "games", force: :cascade do |t|

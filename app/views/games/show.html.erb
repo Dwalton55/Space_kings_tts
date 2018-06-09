@@ -26,7 +26,7 @@
 <h3>Health: </h3> <%= character.currentHealth %><br>
 <h3> Drive: </h3>	<%= character.currentDrive %><br>
 <h3>Initiative: </h3>	<%= character.initiative %><br>
-<%= link_to "Edit Character", edit_character_path(user_id: current_user.id, game_id: @game_id, id: character.id), class: "btn"%>
+<%= link_to "Edit Character", edit_character_path(id: character.id), class: "btn"%>
 </div>
 </div>
 <% end -%>

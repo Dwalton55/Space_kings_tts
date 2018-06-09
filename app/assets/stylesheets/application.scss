@@ -71,3 +71,20 @@
 .btn.btn-success{
 	float:right;
 }
+
+@-webkit-keyframes moveup{
+	from {margin-top: 0px;}
+	to {margin-top: -350px;}
+}
+@keyframes movieup{
+	from {margin-top: 0px;}
+	to {margin-top: -350px;}
+}
+@-webkit-keyframes movedown{
+	from {margin-top: -350px;}
+	to {margin-top: 0px;}
+}
+@keyframes moviedown{
+	from {margin-top: -350px;}
+	to {margin-top: -0px;}
+}

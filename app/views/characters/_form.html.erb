@@ -105,7 +105,22 @@
   </div>
 </div>
 </div>
-  <div class="actions">
-    <%= form.submit id: "char_submit", class: "btn btn-warning" %>
-    <button type="button" class="btn btn-primary" onclick="hideMe()"> Click Me</button>
+<div class="container" id="skills-container">
+  <div class="row" style="display:none;">
+    <div class="col-lg-6">
+      <p>Test </p>
+    </div>
+    <div class="col-lg-6">
+      <p>Test Two</p>
+    </div>
+  </div>
+</div>
+<div>
+  <%= link_to 'Cancel', game_path(@game_id), class: "btn btn-danger", style:"float:right;" %>
+ <button type="button" class="btn btn-info" onclick="showMe()" style="display:none; float:right;">BACK</button>
+  <button type="button" class="btn btn-info" onclick="hideMe()" style="display:none; float:right;"> NEXT</button>
+  
+</div>
+   <div class="actions">
+    <%= form.submit id: "char_submit", class: "btn btn-warning", style: "display:none;"%>
  <% end %>
