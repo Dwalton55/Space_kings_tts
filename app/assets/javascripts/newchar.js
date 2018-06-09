@@ -39,6 +39,7 @@ document.getElementById('points').innerHTML= skillpoints;
 if(skillpoints != 0){
 	var subButtion = document.getElementsByClassName("btn btn-info");
 	subButtion[1].style.display = 'none';
+	document.getElementById('char_submit').style.display ="none";
 		}
 	}
 }
