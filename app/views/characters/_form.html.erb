@@ -79,7 +79,7 @@
 
   <div class="form-group">
     <%= form.hidden_field :presense, id: :character_presense, min: 1, max: 4, class: "form-control skill", value: character.presense %>
-    <span>Presense: <span id="presense">1</span></span>
+    <span>Presence: <span id="presense">1</span></span>
     <button class="btn btn-success" type="button" onclick="addPoint(character_presense, presense)"> +</button>
     <button class="btn btn-danger" type="button" onclick="subPoint(character_presense, presense)"> -</button>
   </div>
@@ -108,10 +108,10 @@
 <div class="container" id="skills-container">
   <div class="row" style="display:none;">
     <div class="col-lg-6">
-      <p>Test </p>
+<%= form.check_box("test", {}, "checked", "unchecked") %>
     </div>
     <div class="col-lg-6">
-      <p>Test Two</p>
+
     </div>
   </div>
 </div>
@@ -123,4 +123,4 @@
 </div>
    <div class="actions">
     <%= form.submit id: "char_submit", class: "btn btn-warning", style: "display:none;"%>
- <% end %>
+ <% end %> 

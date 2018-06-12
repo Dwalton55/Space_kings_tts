@@ -21,7 +21,9 @@
     <%= form.label :description %>
     <%= form.text_area :description, id: :game_description, class: "form-control" %>
   </div>
-
+ <div class="form-group">
+    <%= form.hidden_field :gm_id, id: :game_master, value: current_user.id, class: "form-control" %>
+  </div>
   <div class="field">
     <%= form.check_box :locked, id: :game_locked %>
   </div>
