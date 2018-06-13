@@ -108,19 +108,138 @@
 <div class="container" id="skills-container">
   <div class="row" style="display:none;">
     <div class="col-lg-6">
-<%= form.check_box("test", {}, "checked", "unchecked") %>
+      <div class="form-group">
+       <%= form.hidden_field :athletics, id: :athletics_skill, min: 0, max: 4, class: "skills", value: character.athletics %>
+       <span>Athletics:  <span class="skill_points"></span></span>
+       <div class="not-button" onclick="setPractice(athletics_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(athletics_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :biology, id: :biology_skill, min: 0, max: 4, class: "skills", value: character.biology %>
+       <span>Biology:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(biology_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(biology_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :computers, id: :computers_skill, min: 0, max: 4, class: "skills", value: character.computers %>
+       <span>Computers:  <span class="skill_points"></span></span>
+          <div class="not-button" onclick="setPractice(computers_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(computers_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :empathy, id: :empathy_skill, min: 0, max: 4, class: "skills", value: character.empathy %>
+       <span>Empathy:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(empathy_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(empathy_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :engineering, id: :engineering_skill, min: 0, max: 4, class: "skills", value: character.engineering %>
+       <span>Engineering:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(engineering_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(engineering_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :explosives, id: :explosives_skill, min: 0, max: 4, class: "skills", value: character.explosives %>
+       <span>Explosives:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(explosives_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(explosives_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :firearms, id: :firearms_skill, min: 0, max: 4, class: "skills", value: character.firearms %>
+       <span>Firearms:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(firearms_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(firearms_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :investigation, id: :investigation_skill, min: 0, max: 4, class: "skills", value: character.investigation %>
+       <span>Investigation:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(investigation_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(investigation_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :law, id: :law_skill, min: 0, max: 4, class: "skills", value: character.law %>
+       <span>Law:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(law_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(law_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :lying, id: :lying_skill, min: 0, max: 4, class: "skills", value: character.lying %>
+       <span>Lying:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(lying_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(lying_skill)">Mastery</div>
+      </div>
     </div>
     <div class="col-lg-6">
-
+      <div class="form-group">
+       <%= form.hidden_field :melee, id: :melee_skill, min: 0, max: 4, class: "skills", value: character.melee %>
+       <span>Melee:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(melee_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(melee_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :piloting, id: :piloting_skill, min: 0, max: 4, class: "skills", value: character.piloting %>
+       <span>Piloting:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(piloting_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(piloting_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :persuasion, id: :persuasion_skill, min: 0, max: 4, class: "skills", value: character.persuasion %>
+       <span>Persuasion:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(persuasion_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(persuasion_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :perform, id: :perform_skill, min: 0, max: 4, class: "skills", value: character.perform %>
+       <span>Perform:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(perform_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(perform_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :sneaking, id: :sneaking_skill, min: 0, max: 4, class: "skills", value: character.sneaking %>
+       <span>Sneaking:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(sneaking_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(sneaking_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :spacewise, id: :spacewise_skill, min: 0, max: 4, class: "skills", value: character.spacewise %>
+       <span>Spacewise:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(spacewise_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(spacewise_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :survival, id: :survival_skill, min: 0, max: 4, class: "skills", value: character.survival %>
+       <span>Survival:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(survival_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(survival_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :telekinesis, id: :telekinesis_skill, min: 0, max: 4, class: "skills", value: character.telekinesis %>
+       <span>Telekinesis:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(telekinesis_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(telekinesis_skill)">Mastery</div>
+      </div>
+      <div class="form-group">
+       <%= form.hidden_field :telepathy, id: :telepathy_skill, min: 0, max: 4, class: "skills", value: character.telepathy %>
+       <span>Telepathy:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(telepathy_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(telepathy_skill)">Mastery</div>
+     </div>
+      <div class="form-group">
+       <%= form.hidden_field :special, id: :special_skill, min: 0, max: 4, class: "skills", value: character.special %>
+       <span>Special:  <span class="skill_points"></span></span>
+        <div class="not-button" onclick="setPractice(special_skill)">Practice</div>
+       <div class="not-button" onclick="setMaster(special_skill)">Mastery</div>
+      </div>
     </div>
   </div>
-</div>
+  </div>
 <div>
+</div>
   <%= link_to 'Cancel', game_path(@game_id), class: "btn btn-danger", style:"float:right;" %>
  <button type="button" class="btn btn-info" onclick="showMe()" style="display:none; float:right;">BACK</button>
   <button type="button" class="btn btn-info" onclick="hideMe()" style="display:none; float:right;"> NEXT</button>
-  
-</div>
    <div class="actions">
     <%= form.submit id: "char_submit", class: "btn btn-warning", style: "display:none;"%>
  <% end %> 
+</div>
+  
