@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180612001356) do
+ActiveRecord::Schema.define(version: 20180626220910) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20180612001356) do
     t.integer "wit"
     t.integer "intelligence"
     t.integer "charm"
-    t.integer "presense"
+    t.integer "presence"
     t.integer "maxDodge"
     t.integer "currentDrive"
     t.integer "initiative"

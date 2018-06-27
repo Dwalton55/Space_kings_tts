@@ -92,6 +92,6 @@ class CharactersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def character_params
-      params.require(:character).permit(:name, :player, :concept, :maxHealth, :currentHealth, :brawn, :agility, :wit, :intelligence, :charm, :presense, :maxDodge, :currentDrive, :initiative, :maxDrive, :currentDrive, :game_id, :athletics, :biology, :computers, :empathy, :engineering, :explosives, :firearms, :law, :lying, :melee, :piloting, :persuasion, :perform, :sneaking, :spacewise, :survival, :telekinesis, :telepathy, :special, :user_id)
+      params.require(:character).permit(:name, :player, :concept, :maxHealth, :currentHealth, :brawn, :agility, :wit, :intelligence, :charm, :presence, :maxDodge, :currentDrive, :initiative, :maxDrive, :currentDrive, :game_id, :athletics, :biology, :computers, :empathy, :engineering, :explosives, :firearms, :law, :lying, :melee, :piloting, :persuasion, :perform, :sneaking, :spacewise, :survival, :telekinesis, :telepathy, :special, :user_id)
     end
 end

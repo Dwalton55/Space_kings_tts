@@ -8,103 +8,111 @@
         <li><%= message %></li>
       <% end %>
       </ul>
-    </div>
-  <% end %>
+    </div> <!-- error explanation div end -->
+  <% end %> <!-- character.errors if end -->
   <div class="row">
-  <div class="field">
-  <%= form.hidden_field :game_id, value: @game_id %>
-</div>
-<div class="field">
-  <%= form.hidden_field :user_id, value: current_user.id %>
-</div>
-  <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :character_name, class: "form-control"%>
-  </div>
 
-  <div class="form-group">
-    <%= form.label :player %>
-    <%= form.text_field :player, id: :character_player, class: "form-control" %>
-  </div>
+    <div class="field">
+      <%= form.hidden_field :game_id, value: @game_id %>
+    </div> <!-- game_id div end  -->
 
-  <div class="form-group">
-    <%= form.label :concept %>
-    <%= form.text_area :concept, id: :character_concept, class: "form-control"%>
-  </div>
-  <div class="form-group">
-    <%= form.hidden_field :maxHealth, id: :character_maxHealth, class: "form-control"%>
-  </div>
+    <div class="field">
+      <%= form.hidden_field :user_id, value: current_user.id %>
+    </div><!-- user_id div end  -->
 
-  <div class="form-group">
-    <%= form.hidden_field :currentHealth, id: :character_currentHealth, class: "form-control"%>
-  </div>
-</div>
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, id: :character_name, class: "form-control"%>
+    </div><!-- name div end  -->
+
+    <div class="form-group">
+      <%= form.label :player %>
+      <%= form.text_field :player, id: :character_player, class: "form-control" %>
+    </div><!-- player div end  -->
+
+    <div class="form-group">
+      <%= form.label :concept %>
+      <%= form.text_area :concept, id: :character_concept, class: "form-control"%>
+    </div><!-- concept div end  -->
+
+    <div class="form-group">
+      <%= form.hidden_field :maxHealth, id: :character_maxHealth, class: "form-control"%>
+    </div><!-- maxHealth div end  -->
+
+    <div class="form-group">
+      <%= form.hidden_field :currentHealth, id: :character_currentHealth, class: "form-control"%>
+    </div><!-- currentHealth div end  -->
+  </div><!-- First row div end  -->
   <div class="row">
   <div class="col-md-6">
+
   <div class="form-group">
     <%= form.hidden_field :brawn, id: :character_brawn, min: 1, max: 4, class: "form-control skill", value: character.brawn  %>
     <span>Brawn: <span id="brawn">1</span></span>
     <button class="btn btn-success" type="button" onclick="addPoint(character_brawn, brawn)"> +</button>
     <button class="btn btn-danger" type="button" onclick="subPoint(character_brawn, brawn)"> -</button>
-  </div>
+  </div><!-- brawn div end  -->
 
   <div class="form-group">
     <%= form.hidden_field :agility, id: :character_agility, min: 1, max: 4, class: "form-control skill", value: character.agility%>
     <span>Agility: <span id="agility">1</span></span>
     <button class="btn btn-success" type="button" onclick="addPoint(character_agility, agility)"> +</button>
     <button class="btn btn-danger" type="button" onclick="subPoint(character_agility, agility)"> -</button>
-  </div>
+  </div><!-- agility div end  -->
 
   <div class="form-group">
     <%= form.hidden_field :wit, id: :character_wit, min: 1, max: 4, class: "form-control skill", value: character.wit%>
     <span>Wit: <span id="wit">1</span></span>
     <button class="btn btn-success"  type="button" onclick="addPoint(character_wit, wit)"> +</button>
     <button class="btn btn-danger" type="button" onclick="subPoint(character_wit, wit)"> -</button>
-  </div>
-  </div>
+  </div><!-- wit div end  -->
+  </div><!-- col-md-6 div end  -->
+
 <div class="col-md-6">
-  <div class="form-group">
-    <%= form.hidden_field :intelligence, id: :character_intelligence, min: 1, max: 4, class: "form-control skill", value: character.intelligence%>
-    <span>Intelligence: <span id="intelligence">1</span></span>
-    <button class="btn btn-success" type="button" onclick="addPoint(character_intelligence, intelligence)"> +</button>
-    <button class="btn btn-danger" type="button" onclick="subPoint(character_intelligence, intelligence)"> -</button>
-  </div>
 
-  <div class="form-group">
-    <%= form.hidden_field :charm, id: :character_charm, min: 1, max: 4, class: "form-control skill", value: character.charm %>
-    <span>Charm: <span id="charm">1</span></span>
-    <button class="btn btn-success" type="button" onclick="addPoint(character_charm, charm)"> + </button>
-    <button  class="btn btn-danger" type="button" onclick="subPoint(character_charm, charm)"> -</button>
-  </div>
+    <div class="form-group">
+      <%= form.hidden_field :intelligence, id: :character_intelligence, min: 1, max: 4, class: "form-control skill", value: character.intelligence%>
+      <span>Intelligence: <span id="intelligence">1</span></span>
+      <button class="btn btn-success" type="button" onclick="addPoint(character_intelligence, intelligence)"> +</button>
+      <button class="btn btn-danger" type="button" onclick="subPoint(character_intelligence, intelligence)"> -</button>
+    </div><!-- intelligence div end  -->
 
-  <div class="form-group">
-    <%= form.hidden_field :presense, id: :character_presense, min: 1, max: 4, class: "form-control skill", value: character.presense %>
-    <span>Presence: <span id="presense">1</span></span>
-    <button class="btn btn-success" type="button" onclick="addPoint(character_presense, presense)"> +</button>
-    <button class="btn btn-danger" type="button" onclick="subPoint(character_presense, presense)"> -</button>
-  </div>
+    <div class="form-group">
+      <%= form.hidden_field :charm, id: :character_charm, min: 1, max: 4, class: "form-control skill", value: character.charm %>
+      <span>Charm: <span id="charm">1</span></span>
+      <button class="btn btn-success" type="button" onclick="addPoint(character_charm, charm)"> + </button>
+      <button  class="btn btn-danger" type="button" onclick="subPoint(character_charm, charm)"> -</button>
+    </div><!-- charm div end  -->
 
-  <div class="form-group">
-    <%= form.hidden_field :maxDodge, id: :character_maxDodge, class: "form-control" %>
-  </div>
+    <div class="form-group">
+      <%= form.hidden_field :presence, id: :character_presence, min: 1, max: 4, class: "form-control skill", value: character.presence %>
+      <span>Presence: <span id="presence">1</span></span>
+      <button class="btn btn-success" type="button" onclick="addPoint(character_presence, presence)"> +</button>
+      <button class="btn btn-danger" type="button" onclick="subPoint(character_presence, presence)"> -</button>
+    </div><!-- Presense div end  -->
 
-  <div class="form-group">
-    <%= form.hidden_field :currentDrive, id: :character_currentDrive, class: "form-control" %>
-  </div>
+    <div class="form-group">
+      <%= form.hidden_field :maxDodge, id: :character_maxDodge, class: "form-control" %>
+    </div><!-- maxDodge div end  -->
 
-  <div class="form-group">
-    <%= form.hidden_field :initiative, id: :character_initiative, class: "form-control" %>
-  </div>
+    <div class="form-group">
+      <%= form.hidden_field :currentDrive, id: :character_currentDrive, class: "form-control" %>
+    </div><!-- currentDrive div end  -->
 
-  <div class="form-group">
-    <%= form.hidden_field :maxDrive, id: :character_maxDrive, class: "form-control" %>
-  </div>
+    <div class="form-group">
+      <%= form.hidden_field :initiative, id: :character_initiative, class: "form-control" %>
+    </div><!-- Initiative div end  -->
 
-  <div class="form-group">
-    <%= form.hidden_field :currentDrive, id: :character_currentDrive, class: "form-control" %>
-  </div>
-</div>
-</div>
+    <div class="form-group">
+      <%= form.hidden_field :maxDrive, id: :character_maxDrive, class: "form-control" %>
+    </div><!-- maxDrive div end  -->
+
+    <div class="form-group">
+      <%= form.hidden_field :currentDrive, id: :character_currentDrive, class: "form-control" %>
+    </div><!-- currentDrive div end  -->
+  </div><!-- col-md-6 div end  -->
+</div><!-- Second row div end  -->
+
 <div class="container" id="skills-container">
   <div class="row" style="display:none;">
     <div class="col-lg-6">

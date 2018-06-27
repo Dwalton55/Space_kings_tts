@@ -84,21 +84,21 @@ function setValues(){
 		document.getElementById('character_charm').value == 0 ||
 		document.getElementById('character_intelligence').value == 0 ||
 		document.getElementById('character_agility').value == 0 ||
-		document.getElementById('character_presense').value == 0 
+		document.getElementById('character_presence').value == 0 
 		){
 	document.getElementById('character_brawn').value = 1;
 	document.getElementById('character_wit').value =1;
 	document.getElementById('character_charm').value =1;
 	document.getElementById('character_intelligence').value =1;
 	document.getElementById('character_agility').value =1;
-	document.getElementById('character_presense').value =1;
+	document.getElementById('character_presence').value =1;
 
 	document.getElementById('brawn').innerHTML = document.getElementById('character_brawn').value;
 	document.getElementById('agility').innerHTML = document.getElementById('character_agility').value;
 	document.getElementById('wit').innerHTML = document.getElementById('character_wit').value;
 	document.getElementById('charm').innerHTML = document.getElementById('character_charm').value;
 	document.getElementById('intelligence').innerHTML = document.getElementById('character_intelligence').value;
-	document.getElementById('presense').innerHTML = document.getElementById('character_presense').value;
+	document.getElementById('presence').innerHTML = document.getElementById('character_presence').value;
 	skillpoints = 7;
 	document.getElementById('points').innerHTML= skillpoints;
 			}
@@ -108,7 +108,7 @@ function setValues(){
 	document.getElementById('wit').innerHTML = document.getElementById('character_wit').value;
 	document.getElementById('charm').innerHTML = document.getElementById('character_charm').value;
 	document.getElementById('intelligence').innerHTML = document.getElementById('character_intelligence').value;
-	document.getElementById('presense').innerHTML = document.getElementById('character_presense').value;
+	document.getElementById('presense').innerHTML = document.getElementById('character_presence').value;
 	var skillpoints = 0;
 	document.getElementById('points').innerHTML= skillpoints;
 	if(skillpoints == 0){
