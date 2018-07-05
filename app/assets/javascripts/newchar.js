@@ -1,6 +1,9 @@
 var skillpoints =7;
-var practice = 0;
+
 var master = 2;
+var practiceBucket = 0;
+var practice = 0;
+
 document.getElementById("master").innerHTML = "Masteries:" + master;
 document.getElementById('points').innerHTML= skillpoints;
 if(document.getElementById('character_brawn').value == 0){
@@ -58,7 +61,7 @@ function hideMe(){
 	var intell = document.getElementById("character_intelligence");
 	document.getElementById("practices").style.display = "initial";
 	document.getElementById("master").style.display = "initial";
-    practice = parseInt(intell.value) + 2;
+    practice = (parseInt(intell.value) - practiceBucket) + 2;
     document.getElementById("practices").innerHTML = "Practices: " + parseInt(practice);
     hide[2].style.display = "initial";
 ;
@@ -143,12 +146,14 @@ function setPractice(test){
 	if(practice > 0 && (test.value == 0 || test.value ==4)){
 		test.value = 2;
 		practice = parseInt(practice) -1;
+		practiceBucket = practiceBucket + 1;
 		document.getElementById("practices").innerHTML = "Practices: " + parseInt(practice);
 		setSkills();
 	}
 	else if(test.value == 2){
 		test.value = 0;
 		practice = parseInt(practice) +1;
+		practiceBucket = practiceBucket - 1;
 		document.getElementById("practices").innerHTML = "Practices: " + parseInt(practice);
 		setSkills();
 	}
